@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <div class="content-wrapper"> <!--这里把content-wrapper第55行的 margin-left 属性值改为auto-->
+    <section class="content">
+      <div class="row">
+        <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-offset-0 col-sm-12">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">用户登陆</h3>
+            </div>
+            <form role="form" [formGroup]="formGroup">
+              <div class="box-body">
+                <ng-container *ngFor="let conf of fc">
+                  <div class="form-group">
+                    <label>{{formConfig[conf][3]['label']}}</label>
+                    <input type="text" class="form-control" formControlName="{{conf}}" placeholder="{{formConfig[conf][3]['placeholder']}}">
+                  </div>
+                </ng-container>
+              </div>
+              <div class="box-footer">
+                <button class="btn btn-primary" (click)="login()" [disabled]="formDisable">提 交</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+
+
+
