@@ -1,5 +1,5 @@
-<div class="wrapper">
-  <div class="content-wrapper"> <!--这里把content-wrapper第55行的 margin-left 属性值改为auto-->
+<!--<div class="wrapper">
+  <div class="content-wrapper"> &lt;!&ndash;这里把content-wrapper第55行的 margin-left 属性值改为auto&ndash;&gt;
     <section class="content">
       <div class="row">
         <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-offset-0 col-sm-12">
@@ -25,8 +25,70 @@
       </div>
     </section>
   </div>
-</div>
+</div>-->
+<!--
 
+<div class="page">
+  <div class="loginwarrp">
+    <div class="logo">管理员登陆</div>
+    <div class="login_form">
+      <form id="Login" name="Login" method="post" onsubmit="" action="">
+        <li class="login-item">
+          <span>用户名：</span>
+          <input type="text" id="username" name="UserName" class="login_input" >
+          <span id="count-msg" class="error"></span>
+        </li>
+        <li class="login-item">
+          <span>密　码：</span>
+          <input type="password" id="password" name="password" class="login_input" >
+          <span id="password-msg" class="error"></span>
+        </li>
+&lt;!&ndash;        <li class="login-item verify">
+                    <span>验证码：</span>
+                    <input type="text" name="CheckCode" class="login_input verify_input">
+                </li>
+                <img src="images/verify.png" border="0" class="verifyimg" />&ndash;&gt;
+                <div class="clearfix"></div>
+                <li class="login-sub">
+                    <input type="submit" name="Submit" value="登录" />
+                  <input type="reset" name="Reset" value="重置" />
+                </li>
+           </form>
+        </div>
+    </div>
+</div>
+-->
+<div id="login"> <!-- !important 勿删，防CSS冲突-->
+  <div class="htmleaf-container">
+    <div class="wrapper">
+      <div class="container">
+        <h1>用户登陆</h1>
+
+        <form class="form" [formGroup]="formGroup">
+          <ng-container *ngFor="let config of fc">
+            <input formControlName="{{config}}" type="{{formConfig[config][3]['type']}}" placeholder="{{formConfig[config][3]['placeholder']}}">
+          </ng-container>
+
+          <button id="login-button" (click)="login()">登 陆</button>
+        </form>
+      </div>
+
+      <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
 
 
 

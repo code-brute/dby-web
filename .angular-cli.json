@@ -56,5 +56,9 @@
   "defaults": {
     "styleExt": "css",
     "component": {}
-  }
+  },
+  "styles": [
+    "styles.scss",
+    "../node_modules/ngx-toastr/toastr.css"
+  ]
 }
